@@ -3,14 +3,13 @@
 import "remixicon/fonts/remixicon.css";
 function Data({ title, sum, ondelete }) {
   function deleteButton() {
-    ondelete(title.name);
-    // console.log(ondelete(name.name));
+    ondelete(title.ind);
   }
   return (
     <>
-      {title.map((title) => {
+      {title.map((title, ind) => {
         return (
-          <div key={title.name} className="data-box">
+          <div key={ind} className="data-box">
             {`${title.name} : ₹${title.price}`}
             <i onClick={deleteButton} className="ri-delete-bin-6-fill"></i>
           </div>

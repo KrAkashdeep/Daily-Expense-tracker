@@ -18,14 +18,12 @@ function Page() {
       setSum(add);
     } else {
       alert("error");
-      // console.log("error");
-      // toast.error("fill the data");
     }
     name.current.value = "";
     price.current.value = "";
   };
   function deleteButton(name) {
-    // console.log(name);
+    // console.log(ind);
     setinitial((name1) => {
       return name1.filter((name1) => {
         return name1 !== name;
